@@ -1,0 +1,51 @@
+.headerTop {
+    box-shadow: var(--shadow);
+    background: var(--mc);
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}
+
+.headerTopWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.headerBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+
+    >a {
+        display: block;
+
+        &:hover {
+            >div {
+
+                >svg {
+                    fill: yellow;
+                }
+
+                >p {
+                    color: yellow;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: none;
+
+        &:last-child {
+            display: flex;
+        }
+    }
+}
+
+.headerText {
+    color: var(--white);
+}

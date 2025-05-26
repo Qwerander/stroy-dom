@@ -1,0 +1,40 @@
+.menu {
+  margin: 0 auto;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+
+  // background-color: var(--bg);
+  >a {
+    color: var(--link);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--link-hover);
+    }
+  }
+
+  .active {
+    color: var(--link-hover);
+
+    &:hover {
+      color: var(--link);
+    }
+  }
+
+  @media (max-width: 765px) {
+    flex-direction: column;
+    height: 100%;
+    padding: 0px;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+
+    >a {
+      font-size: 32px;
+      color: var(--white);
+    }
+  }
+}

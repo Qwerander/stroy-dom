@@ -1,0 +1,25 @@
+@import '../../../styles/mixins.scss';
+
+.headerBottom {
+    box-shadow: var(--shadow);
+    background: #fff;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.headerWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.headerInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerLogo {
+    @include adaptive-px(width, 265, 200);
+    @include adaptive-px(height, 75, 50);
+}

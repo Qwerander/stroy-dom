@@ -1,0 +1,7 @@
+// mixins.scss
+@mixin adaptive-px($property, $start-size, $end-size, $start-resolution: 1920, $end-resolution: 320) {
+	$size-diff: $start-size - $end-size;
+	$resolution-diff: $start-resolution - $end-resolution;
+
+	#{$property}: calc(#{$end-size}px + #{$size-diff} * ((100vw - #{$end-resolution}px) / #{$resolution-diff}));
+  }

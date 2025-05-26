@@ -1,0 +1,9 @@
+.navBar {
+  padding: 12px;
+  // background-color: var(--bg);
+
+  // min-height: 68px;
+  @media (max-width: 768px) {
+    order: 3;
+  }
+}

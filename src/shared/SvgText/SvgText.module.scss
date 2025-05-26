@@ -1,0 +1,20 @@
+.svgWrap {
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.svg {
+    fill: #fff;
+    transition: var(--ts);
+}
+
+.text {
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
