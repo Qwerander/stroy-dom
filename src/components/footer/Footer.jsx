@@ -1,56 +1,50 @@
+// Footer.jsx
+import React from "react";
 import cls from "./Footer.module.scss";
 import { Layout } from "../../shared/layout/Layout";
-// import { FooterMenuBlock } from './footerComponents/FooterMenuBlock';
-// import { FooterCategoryBlock } from './footerComponents/FooterCategoryBlock';
-import { FooterPriceListBlock } from "./footerComponents/FooterPriceListBlock";
-import { FooterContactsBlock } from "./footerComponents/FooterContactsBlock";
-import { FooterMainBlock } from "./footerComponents/FooterMainBlock";
-import { FooterBottom } from "./footerComponents/footerBottom";
-import { FooterOutside } from "./footerComponents/FooterOutside";
-import { FooterMap } from "./footerComponents/footerMap";
-
-import { ReactComponent as PhoneSVG } from "../../assets/icons/phone.svg";
-import { ReactComponent as MailSVG } from "../../assets/icons/mail.svg";
-import { HeaderSocial } from "../../components/header/headerSocial/HeaderSocial";
-import { FooterRekvizit } from "./footerComponents/FooterRekvizit";
 
 export const Footer = () => {
   return (
-    <div className={cls.footer}>
+    <footer className={cls.footer}>
       <Layout>
-        <div className={cls.footer__wrapper}>
-          {/* <FooterMainBlock /> */}
-          {/* <FooterMenuBlock />
-                    <FooterCategoryBlock /> */}
-          {/* <FooterPriceListBlock /> */}
-          {/* <FooterContactsBlock /> */}
+        <div className={cls.container}>
+          <div className={cls.contacts}>
+            <h3 className={cls.title}>Контакты</h3>
+            <address className={cls.address}>
+              <p>630591 г. Уфа, Республика</p>
+              <p>Санис-восточная, 12</p>
+              <p>Ежедневно с 10:00 до 19:00</p>
+              <p>
+                <a href="mailto:info@attoyolom-praekt.pro" className={cls.link}>
+                  info@attoyolom-praekt.pro
+                </a>
+              </p>
+            </address>
 
-          <div className={cls.ContactsPage__contacts}>
-            <h3>Пункт выдачи документов:</h3>
-            <p>г. Уфа, ул.Красина, 21, офис 103</p>
-            <h3>Всегда ответим:</h3>
-            <div className={cls.ContactsPage__contacts}>
-              <div className={cls.ContactsPage__phone}>
-                <PhoneSVG />
-                <a href="tel:+79196090700">+7 (919) 60 90 700</a>
-              </div>
-              <div className={cls.ContactsPage__mail}>
-                <MailSVG />
-                <a href="mailto: info@kvantexpert.ru">info@kvantexpert.ru</a>
-              </div>
-            </div>
-
-            <div className={cls.ContactsPage__social}>
-              <h4>Мы в соц. сетях:</h4>
-              <HeaderSocial />
+            <div className={cls.phones}>
+              <p>
+                <a href="tel:+73472576039" className={cls.link}>
+                  +7 (347) 257-60-39
+                </a>
+              </p>
+              <p>
+                <a href="tel:+79870389565" className={cls.link}>
+                  +7 (987) 038-95-65
+                </a>
+              </p>
             </div>
           </div>
-          <FooterMap />
+
+          <div className={cls.actions}>
+            <button className={cls.checkButton}>Позвонить</button>
+          </div>
         </div>
-        {/* <FooterBottom /> */}
-        <FooterRekvizit />
-        <FooterOutside />
       </Layout>
-    </div>
+      <Layout>
+        <div className={cls.copyright}>
+          <p>2025 Строй Дом Проект</p>
+        </div>
+      </Layout>
+    </footer>
   );
 };

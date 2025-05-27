@@ -1,6 +1,7 @@
 import { About } from "../../components/homePage/about/About";
 import { Construction } from "../../components/homePage/construction/Construction";
 import { Consult } from "../../components/homePage/consult/Consult";
+import { Faq } from "../../components/homePage/faq/Faq";
 import { Hero } from "../../components/homePage/hero/Hero";
 import { Services } from "../../components/homePage/services/Services";
 import { Layout } from "../../shared/layout/Layout";
@@ -14,6 +15,7 @@ export const HomePage = ({ toggleIsOpenForm }) => {
       <About toggleIsOpenForm={toggleIsOpenForm} />
       <Consult toggleIsOpenForm={toggleIsOpenForm} />
       <Construction toggleIsOpenForm={toggleIsOpenForm} />
+      <Faq toggleIsOpenForm={toggleIsOpenForm} />
       {/* <Layout>
         <Expert />
       </Layout>

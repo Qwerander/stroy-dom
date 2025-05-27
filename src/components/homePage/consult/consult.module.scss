@@ -1,3 +1,58 @@
 .Consult {
     background: var(--accent) url('../../../assets/img/consult/bg.webp') no-repeat top left / cover;
 }
+
+.consultationBlock {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.content {
+    flex: 1;
+    margin-bottom: 15px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+}
+
+.text {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.button {
+    background-color: #2a5885;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+
+    &:hover {
+        background-color: #1e466e;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}

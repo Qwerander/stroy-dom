@@ -1,97 +1,96 @@
-@import '../../styles/mixins.scss';
-
+// Footer.module.scss
 .footer {
-    margin-top: 60px;
-    padding: 60px 0;
-    line-height: 150%;
-    color: var(--black);
-    background-color: var(--bg);
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 30px 0;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #e0e0e0;
 }
 
-.footer {
-    &__wrapper {
-        display: flex;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        width: 100%;
-    }
-}
-
-
-@media (max-width: 640px) {
-    .footer {
-        padding: 16px 0;
-
-        &__wrapper {
-            display: flex;
-           flex-direction: column;
-           align-items: center  ;
-        }
-
-    }
-}
-
-// @media (max-width: 460px) {
-//     .footer {
-//         padding: 20px;
-//     }
-// }
-
-@media (max-width: 403px) {
-    .footer {
-        &__wrapper {
-            grid-template-columns: 1fr;
-        }
-
-    }
-}
-
-
-
-.ContactsPage {
-    flex: 1;
-    margin-top: 100px;
-    max-width: 800px;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    @include adaptive-px(gap, 40, 15);
-    width: 100%;
-    justify-content: center;
-    padding: 25px;
-    border: 3px dotted var(--green);
-    border-radius: 20px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "contacts actions"
+        "copyright copyright";
+    gap: 30px;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
-
-    &__contacts {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        h3 {
-            @include adaptive-px(font-size, 34, 18);
-        }
-
-        p {
-            @include adaptive-px(font-size, 22, 14);
-        }
-
-        h4 {
-
-            @include adaptive-px(font-size, 24, 14);
-        }
-
-    }
-
-    &__phone,
-    &__mail {
-        display: flex;
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr auto auto;
+        grid-template-areas: "contacts actions copyright";
         align-items: center;
-        gap: 10px;
     }
+}
+
+.contacts {
+    grid-area: contacts;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    grid-column: 1 / -1;
+}
+
+.address {
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.phones {
+    line-height: 1.5;
+}
+
+.link {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #1e466e;
+        text-decoration: underline;
+    }
+}
+
+.actions {
+    grid-area: actions;
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkButton {
+    background-color: #2a5885;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #1e466e;
+    }
+}
+
+.copyright {
+    border-top: 1px solid var(--white);
+    margin-top: 20px;
+    padding-top: 20px;
+    grid-area: copyright;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
 
 }

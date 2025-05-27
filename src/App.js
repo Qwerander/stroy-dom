@@ -5,6 +5,8 @@ import { useState } from "react";
 import { Header } from "./components/header/Header";
 import { Modal } from "./shared/Modal/Modal";
 import { Form } from "./components/form/Form";
+import { Icons } from "./components/icons/Icons";
+import { Footer } from "./components/footer/Footer";
 
 export const App = () => {
   const { pathname } = useLocation();
@@ -13,12 +15,14 @@ export const App = () => {
   return (
     <>
       <Header />
+      <Icons />
       <Routes>
         <Route
           path="/"
           element={<HomePage toggleIsOpenForm={toggleIsOpenForm} />}
         />
       </Routes>
+      <Footer />
       <Modal isOpen={isOpenForm} onClose={toggleIsOpenForm}>
         <Form toggleIsOpen={toggleIsOpenForm} />
       </Modal>
